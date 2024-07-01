@@ -11,6 +11,7 @@
         android:id="@+id/ettext"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:hint="@string/enter_the_value_here"
         android:digits="0123456789"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
