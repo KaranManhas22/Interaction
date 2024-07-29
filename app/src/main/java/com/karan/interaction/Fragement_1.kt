@@ -22,7 +22,6 @@ private const val ARG_PARAM2 = "param2"
 class Fragement_1 : Fragment(), Interface2 {
     lateinit var binding: FragmentFragement1Binding
     var mainActivity: MainActivity? = null
-
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -35,7 +34,6 @@ class Fragement_1 : Fragment(), Interface2 {
         }
         mainActivity = activity as MainActivity
         mainActivity?.interface2 = this
-
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -56,9 +54,6 @@ class Fragement_1 : Fragment(), Interface2 {
             mainActivity?.changeCounter("value is reset")
 
         }
-
-
-
     }
 
     override fun onCreateView(
@@ -68,8 +63,6 @@ class Fragement_1 : Fragment(), Interface2 {
         binding = FragmentFragement1Binding.inflate(layoutInflater)
         // Inflate the layout for this fragment
         return binding.root
-
-
     }
 
     companion object {
@@ -94,21 +87,25 @@ class Fragement_1 : Fragment(), Interface2 {
 
 
     override fun colourChange() {
+
         binding.LAYOUT1.setBackgroundColor(
             ContextCompat.getColor(requireContext(), R.color.red)
         )
-
-
     }
 
     override fun colourChange2() {
-        binding.LAYOUT1.setBackgroundColor(ContextCompat.getColor(requireContext(), R.color.Green))
-
+        binding.LAYOUT1.setBackgroundColor(
+            ContextCompat.getColor(
+                requireContext(),
+                R.color.Green
+            )
+        )
     }
 
     override fun colourChange3() {
         binding.LAYOUT1.setBackgroundColor(ContextCompat.getColor(requireContext(), R.color.Blue))
     }
-
-
 }
+
+
+
